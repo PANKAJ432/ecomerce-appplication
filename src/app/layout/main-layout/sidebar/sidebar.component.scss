@@ -1,0 +1,47 @@
+.sidebarWrapper {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    height: calc(99vh - 53px);
+    background-color: #ccd5ed;
+    position: fixed;
+    left: 0;
+    z-index: 9;
+    top: 80px;
+    margin: 0px;
+    .sideBar {
+        padding: 0;
+        margin: 0px;
+        li {
+            list-style: none;
+            text-decoration: none;
+            a {
+                text-decoration: none;
+                display: flex;
+                grid-gap: 11px;
+                padding: 25px;
+                transition: all 0.2s;
+                border: 1px solid #b19d9d;
+                font-size: 20px;
+                &.active {
+                    background: #e0e7e9;
+                    color: rgb(8, 7, 7);
+                    font-weight: 500;
+                }
+                &:hover {
+                    background: #b9c1bd;
+                    color: rgb(253, 251, 251);
+                }
+                span {
+                    white-space: nowrap;
+                    color: #091013;
+                    font-size: 23px;
+                    font-weight: 500;
+                }
+                
+                    .sideIcon{
+                        color: #091013;
+                        font-size:25px
+                    }
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+<!-- <div class="card flex justify-content-end">
+    <p-button (click)="show('addProduct','')" label="Add Product"></p-button>
+</div>
+<div class="card flex justify-content-start">
+
+<input type="text" pInputText (input)="filter($event)" placeholder="Filter">
+</div>
+<div class="card flex justify-content-end">
+    <form [formGroup]="dropdownForm">
+        <p-dropdown formControlName="selectedCity" optionValue="category"
+            (onChange)="dropdown.filter($event.value, 'category', 'equals')" appendTo="body" [options]="product"
+            [showClear]="true" dataKey="category" optionLabel="category" placeholder="Select a City"></p-dropdown>
+    </form>
+</div> -->
+
+<!-- <div class="container"> -->
+<div class="card flex flex-column md:flex-row md:justify-content-between row-gap-3">
+    <p-button (click)="show('addProduct','')" label="Add Product"></p-button>
+    <!-- </div> -->
+    <!-- <div class="card flex justify-content-start"> -->
+        <!-- </div> -->
+        <!-- <div class="card flex justify-content-end"> -->
+            <form [formGroup]="dropdownForm">
+                <p-dropdown formControlName="selectedCity" optionValue="name"
+                (onChange)="dropdown.filter($event.value, 'category', 'equals')" appendTo="body" [options]="regions"
+                [showClear]="true" dataKey="category" optionLabel="name" placeholder="Fliter a category"></p-dropdown>
+            </form>
+            <input type="text" pInputText (input)="filter($event)" placeholder="Search value in table">
+            <!-- </div> -->
+        </div>
+       
+
+
+<p-table   #dropdown [value]="productData" (onPage)="onPage($event)" [first]="first" [rows]="rows"
+    [totalRecords]="totalRecords" [rowsPerPageOptions]="[5, 10, 15]"[showCurrentPageReport]="true" [paginator]="true"
+    (sortFunction)="customSort($event)" [customSort]="true" [tableStyle]="{ 'min-width': '50rem' }">
+
+    <ng-template pTemplate="header">
+        <tr>
+            <th pSortableColumn="code" style="width:20%">Code <p-sortIcon field="code"></p-sortIcon></th>
+            <th pSortableColumn="name" style="width:20%">Name <p-sortIcon field="name"></p-sortIcon></th>
+            <th pSortableColumn="category" style="width:20%">Category <p-sortIcon field="category"></p-sortIcon>
+            </th>
+            <th pSortableColumn="quantity" style="width:20%">Quantity <p-sortIcon field="quantity"></p-sortIcon>
+            </th>
+            <th pSortableColumn="Action" style="width:10%">Action <p-sortIcon field="Action"></p-sortIcon></th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-index="rowIndex" let-product>
+        <!-- <p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog> -->
+        <p-toast></p-toast>
+
+        <p-confirmPopup></p-confirmPopup>
+
+        <tr>
+            <td>{{ product.code }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.category }}</td>
+            <td>{{ product.quantity }}</td>
+
+            <td><i class="pi-user-edit" (click)="show('editProduct',product)"></i>
+
+                <i class="pi pi-trash" (click)="delete(product.id,$event)"></i>
+
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+<!-- </div> -->
+
+<div class="card flex justify-content-center"  *ngIf="!productData.length">
+    <div *ngIf="!productData.length" class="card">
+            <p-progressSpinner styleClass="w-4rem h-4rem" strokeWidth="8" fill="var(--surface-ground)" animationDuration=".5s"></p-progressSpinner>
+                <span>NO data Found</span>
+    </div>
+</div>
+<!-- <div class="card flex justify-content-center">
+    <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="120" [rowsPerPageOptions]="[10, 20, 30]"></p-paginator>
+</div> -->

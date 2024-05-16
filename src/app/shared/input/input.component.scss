@@ -1,0 +1,61 @@
+.inputfield{
+    display: flex;
+    gap: 200px;
+}
+.inputfields{
+    display: flex;
+}
+
+// ::ng-deep {
+//     .p-tooltip {
+//         max-width: fit-content;
+//      }
+// } 
+
+// ::ng-deep .ui-tooltip {
+//     max-width: 450px;
+//   }
+//  .tooltip-container {
+//       position: relative;
+//       display: inline-block;
+//     }
+    
+//     .tooltip {
+//       position: absolute;
+//       top: -30px; /* Adjust this value as needed */
+//       left: 50%;
+//       transform: translateX(-50%);
+//       background-color: #333;
+//       color: #fff;
+//       padding: 5px 10px;
+//       border-radius: 5px;
+//       z-index: 999;
+//     }
+
+// .tooltip-container {
+//     position: relative;
+//     display: inline-block;
+//   }
+  
+//   /* Adjust tooltip position */
+//   .ui-tooltip {
+//     position: absolute;
+//     top: -30px; /* Adjust as needed */
+//     left: 50%;
+//     transform: translateX(-50%);
+//     z-index: 1000; /* Ensure tooltip appears above other elements */
+//   }
+
+
+/* styles.css */
+:host {
+    font-family: Arial, sans-serif;
+    display: block;
+    margin: 20px;
+  }
+  
+  /* Optional: You can customize tooltip styles here */
+  .ui-tooltip {
+    max-width: 200px;
+  }
+  

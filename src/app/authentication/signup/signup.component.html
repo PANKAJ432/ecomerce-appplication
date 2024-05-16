@@ -1,0 +1,55 @@
+
+            <div class=" flex justify-content-center align-items-center h-full">
+                <form [formGroup]="signupForm" (ngSubmit)="submitSignUpDetail()">
+         <p-card header="Sign Up">
+
+                        <div class="field">
+                            <label for="name">Name:</label>
+                            <input type="text" pInputText formControlName="name" class="w-full" name="name" placeholder="Enter Your Name">
+                        
+                        <small *ngIf="name.invalid && (name.dirty || name.touched)" class="block p-error">
+                            <div *ngIf="name.errors?.['required']">Name is required.</div>
+                            <div *ngIf="name.errors?.['pattern']">Enter Valid Name.</div>
+                
+                        </small>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email:</label>
+                            <input type="text" pInputText formControlName="email" class="w-full" name="email" placeholder="Enter Email">
+                        
+                        <small *ngIf="email.invalid && (email.dirty || email.touched)" class="block p-error">
+                            <div *ngIf="email.errors?.['required']">Email is required.</div>
+                            <div *ngIf="email.errors?.['email']">Email should be valid.</div>
+                
+                        </small>
+                        </div>
+                
+                
+                        <div class="field">
+                            <label for="password">Password:</label>
+                            <input type="text" pInputText formControlName="password" class="w-full" name="password" placeholder="Enter Password">
+                            <small *ngIf="password.invalid && (password.dirty || password.touched)" class="block p-error">
+                                <div *ngIf="password.errors?.['required']">Password is required.</div>
+                    
+                            </small>
+                        </div>
+                
+                        <div class="field">
+                            <label for="confirmpassword">Confirm Password:</label>
+                            <input type="text" pInputText formControlName="confirmpassword" class="w-full" name="confirmpassword" placeholder="Re-enter password">
+                            <small *ngIf="confirmpassword.invalid && (confirmpassword.dirty || confirmpassword.touched)" class="block p-error">
+                                <div *ngIf="confirmpassword.errors?.['required']">Confirm Password is required.</div>
+                    
+                            </small>
+                            <small *ngIf="signupForm.errors?.['mismatch'] && confirmpassword.valid && password.valid" class="block p-error">Password should not match
+            </small>
+                        </div>
+                
+                
+                <div class="card flex justify-content-center" sytleClass="w-full">
+                    <p-button type="submit" [disabled]="signupForm.invalid" label="SignUp"></p-button>
+                </div>
+                <div class="mt-2">Already a member ?<a routerLink="/auth/login">Log In</a></div>
+                    </p-card>
+                </form>
+                </div>

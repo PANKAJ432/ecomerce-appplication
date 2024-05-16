@@ -1,0 +1,83 @@
+<!-- <form [formGroup]="dropdownForm" (ngSubmit)="'submitForm()'">
+    <div class="inputfield">
+
+        <div class="field">
+            <label for="name">Name:</label>
+            <input type="text" pInputText formControlName="name" class="w-full" name="name"
+                placeholder="Enter Your Name">
+
+            <small *ngIf="name.invalid && (name.dirty || name.touched)" class="block p-error">
+                <div *ngIf="name.errors?.['required']">Name is required.</div>
+            </small>
+        </div>
+
+        <div class="field"> 
+            <label for="email">Email:</label>
+            <input type="text" pInputText formControlName="email" class="w-full" name="email" placeholder="Enter Email">
+
+            <small *ngIf="email.invalid && (email.dirty || email.touched)" class="block p-error">
+                <div *ngIf="email.errors?.['required']">Email is required.</div>
+                <div *ngIf="email.errors?.['email']">Email should be valid.</div>
+            </small>
+        </div> -->
+<!-- 
+        <div class="field">
+            <label for="branchNumber">BranchNumber:</label>
+            <input type="text" pInputText formControlName="branchNumber" class="w-full" name="branchNumber"
+                placeholder="Enter BranchNumber">
+            <small *ngIf="branchNumber.invalid && (branchNumber.dirty || branchNumber.touched)" class="block p-error">
+                <div *ngIf="branchNumber.errors?.['required']">BranchNumber is required.</div>
+            </small>
+        </div>
+    </div>
+
+    <div class="inputfields">
+        <div class="field">
+            <label for="telephoneNumber">Telephone Number:</label><br>
+            <p-inputMask mask="999-99-9999" formControlName="telephoneNumber" class="w-full" name="telephoneNumber"
+                placeholder="999-99-9999"></p-inputMask> -->
+            <!-- <i class="pi pi-info-circle" pTooltip="Enter your username" tooltipPosition="top" ></i> -->
+            <!-- <label for="telephoneNumber">Telephone Number:</label><br>
+            <p-inputMask mask="999-99-9999" formControlName="telephoneNumber" class="w-full" name="telephoneNumber"
+                placeholder="999-99-999"></p-inputMask> -->
+            <!-- <i class="pi pi-info-circle" pTooltip="Enter your telephone number Enter your telephone number Enter your telephone number Enter your telephone numberEnter your telephone numberEnter your telephone number" tooltipPosition="top" ></i> -->
+            <!-- <span class="tooltip-container">
+                <i class="pi pi-info-circle" 
+                   [pTooltip]="'Enter your telephone number'" 
+                   tooltipPosition="top">
+                </i>
+              </span>
+               -->
+            <!-- <span class="required-icon"
+                [pTooltip]="'Enter your telephone number Enter your telephone number Enter your telephone number Enter your telephone numberEnter your telephone numberEnter your telephone number'"
+                tooltipPosition="top" positionStyle="{ 'position': 'fixed', 'top': '100px', 'left': '100px' }"
+                positionStyleClass="fixed-tooltip">
+                <i class="pi pi-info-circle"></i>
+            </span> -->
+            <!-- <button type="button" pButton icon="pi pi-question-circle" pTooltip="Tooltip text" [positionStyle]="{ 'position': 'fixed', 'top': '100px', 'left': '100px' }" positionStyleClass="fixed-tooltip">Hover me</button> -->
+<!-- app.component.html -->
+<!-- <button pButton type="button" label="Hover Me" [pTooltip]="tooltipText" tooltipPosition="top"></button> -->
+
+
+            <!-- <i class="pi pi-info-circle"
+                pTooltip="Tooltip textEnter your telephone number Enter your telephone number Enter your telephone number Enter your telephone numberEnter yEnter your telephone number Enter your telephone number Enter your telephone number Enter your telephone numberEnter y"
+                tooltipPosition="top"></i> -->
+            <!-- <small *ngIf="telephoneNumber.invalid && (telephoneNumber.dirty || telephoneNumber.touched)"
+                class="block p-error">
+                <div *ngIf="telephoneNumber.errors?.['required']">Telephone Number is required for FLS Only.</div>
+            </small>
+        </div>
+    </div>
+</form> -->
+
+
+
+
+<!-- Today Code -->
+
+<!-- dynamic-input.component.html -->
+<div>
+    <label>{{ label }}</label>
+    <input type="text" [placeholder]="placeholder" [(ngModel)]="value">
+  </div>
+  

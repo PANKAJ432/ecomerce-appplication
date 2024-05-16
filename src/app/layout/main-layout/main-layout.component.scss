@@ -1,0 +1,15 @@
+.mainWrapper {
+    left: 210px;
+    width: calc(100vw - 210px);
+    position: relative;
+    top: 0px;
+    padding: 20px;
+    .chartHead {
+        padding: 15px 0;
+        margin-bottom: 10px;
+        h4 {
+            margin-bottom: 0;
+            font-size: 18px;
+        }
+    }
+}
